@@ -1,7 +1,10 @@
 # Mikrotik_emergency_restorer
 
+At first, remember to add two scripts in /system script!!! 
+
 saver.rsc
 ==========
+Restores configuation from file created with saver.rsc
 
 loader.rsc 
 ==========
@@ -18,3 +21,13 @@ The idea behind creating disabled task and after a while enabling them, is to ma
 schedule, so we don't need to disable it after emergency restore.
 
 Remember to disable the schedule in case everything is fine
+
+#Usage
+
+/system/scripts/run saver
+
+If schedule looks ok, apply risky changes in mikrotik configuration
+
+If You loose accees to You router, after 15 minutes it will restore a configuration created with saver, before applied risk changes.
+
+If everything is OK, remember to disable test schedule. Or you will resore the previous configuration
