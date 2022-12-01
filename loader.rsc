@@ -1,4 +1,4 @@
-## Restore configuation from file created with saver.rsc
+## Restore configuation from a file created with saver.rsc
 ## 
 
 ### 
