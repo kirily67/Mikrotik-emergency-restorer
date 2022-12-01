@@ -22,7 +22,7 @@ schedule, so we don't need to disable it after emergency restore.
 
 Remember to disable the schedule in case everything is fine
 
-#Usage
+# Usage
 
 /system/scripts/run saver
 
