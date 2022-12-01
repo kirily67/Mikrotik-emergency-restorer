@@ -55,4 +55,4 @@
 /system/scheduler/set [find name=test] disabled=no
 
 # Print detailed info about schedule
-/system/scheduler/print [find name=test] detail
+/system/scheduler/print detail where name=test
