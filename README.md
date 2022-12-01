@@ -1,4 +1,4 @@
-# Mikrotik_emergency_restorer
+# Mikrotik emergency restorer
 
 These two scripts create and restore a .backup and .rsc files with current mikrotik condiguration. Use it in cases when you can lose access in you router but for some reason you can't use safe mode.
 
