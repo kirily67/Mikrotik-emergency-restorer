@@ -34,6 +34,6 @@ If everything is OK, remember to disable test schedule. Or you will resore the p
 
 Don't get your hopes up, but if I continue to do "stupid things" with mikrotik configs, maybe I'll come up with an option to automate the scheduler disabling on successful router work after applying the issues. Maybe something with watchdog... I'll think about it when the time comes ;-)
 
-№ Copyright
+# Copyright
 
 Use everything on You own risk, free of charge, as you want, when you want, for whatever you want and no matter home or commercial use.
