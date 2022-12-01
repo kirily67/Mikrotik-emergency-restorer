@@ -29,3 +29,7 @@ If schedule looks ok, apply risky changes in mikrotik configuration
 If You loose accees to You router, after 15 minutes it will restore a configuration created with saver, before applied risk changes.
 
 If everything is OK, remember to disable test schedule. Or you will resore the previous configuration
+
+# Future improvements
+
+Don't get your hopes up, but if I continue to do "stupid things" with mikrotik configs, maybe I'll come up with an option to automate the scheduler disabling on successful router work after applying the issues. Maybe something with watchdog... I'll think about it when the time comes ;-)
