@@ -6,7 +6,7 @@
 :global adminpass "mypassword"
 
 # getting router ID
-:local id [/system/identity/get name]
+:global id [/system/identity/get name]
 
 #executes restore script
 :execute {/system backup load name="flash/$id-last.backup" password="$adminpass";}
