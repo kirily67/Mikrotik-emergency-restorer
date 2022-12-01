@@ -4,7 +4,7 @@ At first, remember to add two scripts in /system script!!!
 
 saver.rsc
 ==========
-Restores configuation from file created with saver.rsc
+Restores configuation from file created with loader.rsc
 
 loader.rsc 
 ==========
