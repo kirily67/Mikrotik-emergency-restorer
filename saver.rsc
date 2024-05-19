@@ -13,10 +13,11 @@
 # Remember to disable the schedule in case everything is fine
 
 
-### Change date in next 3 rows
+### Change data in next 3 rows
 :local sftpuser "my_sftp_user"
 :local sftppass "my_sftp_pass"
 :local sftpurl "sftp://my.sftp.server:server_port/path/"
+:local safety_time 5
 
 
 # ====== End of changes
@@ -29,18 +30,18 @@
 :local time [/system clock get time]
 :local hour [:pick $time 0 2]
 :local minute [:pick $time 3 5]
-:if ($minute>=45) do={
+:if ($minute>=60-$safety_time) do={
   :set h1 ($hour)
-  :set m1 ($minute-45)
+  :set m1 ($minute-(60-$safety_time))
 } else={
-  :set m1 ($minute+15)
+  :set m1 ($minute+$safety_time)
   :set h1 ($hour)
 }
 
 ## Creates or modifies schedule with name test, wgich will run after 15 minutes to start
 ## a loader.rsc script. 
 :if ([system/scheduler/find name=test] = "") do={/system/scheduler/add name=test}
-/system/scheduler/set [find name=test] start-date=[/system/clock/get date] start-time="$h1:$m1:00" interval="00:15:00" on-event="/system/script/run loader" disabled=yes
+/system/scheduler/set [find name=test] start-date=[/system/clock/get date] start-time="$h1:$m1:00" interval="00:$safety_time:00" on-event="/system/script/run loader" disabled=yes
 
 ## Creates .backup and .rsc files with name router_id-last.backup (.rsc) in folder flash/
 /system/backup/save name="flash/$id-last"
