@@ -12,7 +12,7 @@ loader.rsc
 ==========
 This script creates a .backup and .rsc files with current mikrotik condiguration. Use it in cases when you can lose access in you router but for some reason you can't use safe mode.
 
-The script first creates (or modifies if exists) disabled scheduler task which will run after 15 minutes and will execute loader.rsc script. After that creates backups, uploads both files to sftp servers, sets early created schedule as enabled, and print detailed info for schedule.
+The script first creates (or modifies if exists) disabled scheduler task, which will run after predefined time and will execute loader.rsc script. After that creates backups, uploads both files to sftp servers (if you like), sets early created schedule as enabled, and print detailed info for schedule.
 
 If you want to use ftp instead of sftp, remember to add mode=ftp in fetch command
  
@@ -26,7 +26,7 @@ Remember to disable the schedule in case everything is fine
 
 If schedule looks ok, apply risky changes in mikrotik configuration
 
-If You loose accees to You router, after 15 minutes it will restore a configuration created with saver, before applied risk changes.
+If You loose accees to You router, after predefined time, the loader script will restore a configuration created with saver, before applied risk changes.
 
 If everything is OK, remember to disable test schedule. Or you will resore the previous configuration
 
