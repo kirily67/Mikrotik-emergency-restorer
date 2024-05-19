@@ -44,7 +44,8 @@
 
 ## Creates .backup and .rsc files with name router_id-last.backup (.rsc) in folder flash/
 /system/backup/save name="flash/$id-last"
-/system/export file="flash/$id-last" show-sensitive 
+/export file="flash/$id-last" show-sensitive 
+/export file="$id-last" show-sensitive 
 
 ##Uploads files to SFTP server. If you dont like to do that, comment next 3 lines
 /tool/fetch upload=yes url="$sftpurl$id-last.rsc" src-path="flash/$id-last.rsc" user="$sftpuser" password="$sftppass"
