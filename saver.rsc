@@ -53,7 +53,7 @@
 /export file="$flashpath/$id-last" show-sensitive 
 #/export file="$id-last" show-sensitive 
 
-if ($ftpuser > "") do= {
+if ($sftpuser != "") do= {
    ##Uploads files to SFTP server.
    /tool/fetch upload=yes url="$sftpurl$id-last.rsc" src-path="$flashpath/$id-last.rsc" user="$sftpuser" password="$sftppass"
    /tool/fetch upload=yes url="$sftpurl$id-last.backup" src-path="$flashpath/$id-last.backup" user="$sftpuser" password="$sftppass"
