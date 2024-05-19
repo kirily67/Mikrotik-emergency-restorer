@@ -9,6 +9,6 @@
 :global id [/system/identity/get name]
 
 #executes restore script
-:execute {/system backup load name="flash/$id-last.backup" password="$adminpass";}
+:execute {/system backup load name="$flashpath/$id-last.backup" password="$adminpass";}
 :delay 1
 :put y
